@@ -24,6 +24,12 @@ public class GameWindow extends JFrame {
     private static int rectY  = 100;
     private static int rectW = 100;
     private static int rectH = 5;
+
+    private static float ballX = 100; // положение мяча по горизонту
+    private static float ballY = 50;
+    private static float speedX = 50;
+    private static float speedY = 50;
+    private static int ballR = 5; // радиус мяча
     public GameWindow(){
         MyKey gamer = new MyKey();
         addKeyListener(gamer);
@@ -114,13 +120,32 @@ public class GameWindow extends JFrame {
 
         // g.fillOval(10,10,200,100);
         int testY = gameWindow.getHeight() - rectH - rectY;
+        g.fillOval((int)ballX, (int)ballY, ballR, ballR);
         g.fillRect((int)rectX,gameWindow.getHeight() - rectH - rectY,rectW,rectH);
         long current_time = System.nanoTime();
         float delta_time = (current_time - last_frame_time) * 0.000000001f;
         last_frame_time = current_time;
         drop_top += delta_time * drop_v * 0;
-        //g.drawImage(drop, (int)drop_left,(int)drop_top, null);
-        if (drop_top > gameWindow.getHeight()) {
+        ballX += delta_time * speedX;
+        ballY += delta_time * speedY;
+
+        // проверяем попали ли мы в ракетку
+        if (ballY >= testY){
+            if (ballX >= rectX && ballX <= rectX + rectW){
+                speedY *= -1;
+                //speedX *= -1;
+            }
+
+        }
+        if (ballY <= 0) {
+            speedY *=-1;
+            //speedX *= -1;
+        }
+        if (ballX <= 0 || ballX >= gameWindow.getWidth()){
+            //speedY *=-1;
+            speedX *= -1;
+        }
+        if (ballY > gameWindow.getHeight()) {
             g.drawImage(game_over, 280, 120, null);
         }
 
