@@ -9,8 +9,8 @@ import java.awt.*;
 import static javax.imageio.ImageIO.read;
 
 
-public class GameWindow extends JFrame {
-    private static  GameWindow  gameWindow;
+public class GamePingPong extends JFrame {
+    private static GamePingPong gamePingPong;
     private  static long last_frame_time;
     private static Image background;
     private static Image drop;
@@ -30,7 +30,7 @@ public class GameWindow extends JFrame {
     private static float speedX = 50;
     private static float speedY = 50;
     private static int ballR = 5; // радиус мяча
-    public GameWindow(){
+    public GamePingPong(){
         MyKey gamer = new MyKey();
         addKeyListener(gamer);
         setFocusable(true);
@@ -55,7 +55,7 @@ public class GameWindow extends JFrame {
                 rectX -= 10;
             }
            if ( rectX < 0) rectX =0;
-            if (gameWindow.getWidth() - rectW < rectX) rectX = gameWindow.getWidth() - rectW;
+            if (gamePingPong.getWidth() - rectW < rectX) rectX = gamePingPong.getWidth() - rectW;
 //        }
         }
         @Override
@@ -68,60 +68,44 @@ public class GameWindow extends JFrame {
 	// write your code here
 
         try {
-            background = ImageIO.read(GameWindow.class.getResourceAsStream("background.png"));
+            background = ImageIO.read(GamePingPong.class.getResourceAsStream("background.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
-            game_over = ImageIO.read(GameWindow.class.getResourceAsStream("game_over.png"));
+            game_over = ImageIO.read(GamePingPong.class.getResourceAsStream("game_over.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
-            drop = ImageIO.read(GameWindow.class.getResourceAsStream("drop.png"));
+            drop = ImageIO.read(GamePingPong.class.getResourceAsStream("drop.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        gameWindow = new GameWindow();
+        gamePingPong = new GamePingPong();
 
 
 
-        gameWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        gameWindow.setLocation(100,200);
-        gameWindow.setSize(906,478);
-        gameWindow.setResizable(false);
+        gamePingPong.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        gamePingPong.setLocation(100,200);
+        gamePingPong.setSize(906,478);
+        gamePingPong.setResizable(false);
         GameField game_filed = new GameField();
 
-        game_filed.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                //super.mousePressed(e);
-                int x = e.getX();
-                int y = e.getY();
-                float drop_right = drop_left + drop.getWidth(null);
-                float drop_botton = drop_top + drop.getHeight(null);
-                boolean is_drop  = x >= drop_left && x <= drop_right && y >= drop_top && y <= drop_botton;
-                if (is_drop){
-                    drop_top = -100;
-                    drop_left = (float)(Math.random()* (game_filed.getWidth() - drop.getWidth(null)) );
-                    drop_v +=  10;
-                    score ++;
-                    gameWindow.setTitle("Score" + score);
-                }
-            }
-        });
+
         last_frame_time = System.nanoTime();
-        gameWindow.add(game_filed);
-        gameWindow.setVisible(true);
+        gamePingPong.add(game_filed);
+        gamePingPong.setVisible(true);
     }
     private static void onRepaint(Graphics g){
         g.drawImage(background,0,0,null);
 
         // g.fillOval(10,10,200,100);
-        int testY = gameWindow.getHeight() - rectH - rectY;
+        int testY = gamePingPong.getHeight() - rectH - rectY;
         g.fillOval((int)ballX, (int)ballY, ballR, ballR);
-        g.fillRect((int)rectX,gameWindow.getHeight() - rectH - rectY,rectW,rectH);
+        g.setColor(Color.red);
+        g.fillRect((int)rectX, gamePingPong.getHeight() - rectH - rectY,rectW,rectH);
         long current_time = System.nanoTime();
         float delta_time = (current_time - last_frame_time) * 0.000000001f;
         last_frame_time = current_time;
@@ -141,11 +125,11 @@ public class GameWindow extends JFrame {
             speedY *=-1;
             //speedX *= -1;
         }
-        if (ballX <= 0 || ballX >= gameWindow.getWidth()){
+        if (ballX <= 0 || ballX >= gamePingPong.getWidth() - 2 * ballR){
             //speedY *=-1;
             speedX *= -1;
         }
-        if (ballY > gameWindow.getHeight()) {
+        if (ballY > gamePingPong.getHeight()) {
             g.drawImage(game_over, 280, 120, null);
         }
 

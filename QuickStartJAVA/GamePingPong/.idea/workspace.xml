@@ -24,49 +24,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/GameWindow.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/GamePingPong.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="144" column="14" selection-start-line="144" selection-start-column="14" selection-end-line="144" selection-end-column="14" />
+            <state relative-caret-position="156">
+              <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.desktop/java/awt/Component.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105621">
-              <caret line="6589" selection-start-line="6589" selection-end-line="6589" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.desktop/java/awt/Container.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36873">
-              <caret line="2263" selection-start-line="2263" selection-end-line="2263" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.desktop/java/awt/Window.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32844">
-              <caret line="2039" selection-start-line="2039" selection-end-line="2039" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17085">
-              <caret line="1073" selection-start-line="1073" selection-end-line="1073" />
             </state>
           </provider>
         </entry>
@@ -81,13 +45,14 @@
       <list>
         <option value="$PROJECT_DIR$/lesson_7/catch_the_drop/src/ru/geekbrains/catch_the_drop/GameWindow1.java" />
         <option value="$PROJECT_DIR$/src/com/company/GameWindow.java" />
+        <option value="$PROJECT_DIR$/src/com/company/GamePingPong.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-410" />
-    <option name="width" value="2189" />
-    <option name="height" value="1074" />
+    <option name="width" value="2190" />
+    <option name="height" value="1075" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -95,8 +60,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,25 +67,16 @@
               <item name="GamePingPong" type="b2602c69:ProjectViewProjectNode" />
               <item name="GamePingPong" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="GamePingPong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GamePingPong" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GamePingPong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GamePingPong" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553888363023" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554046075925" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
@@ -143,7 +97,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.GameWindow" />
+      <option name="MAIN_CLASS_NAME" value="com.company.GamePingPong" />
       <module name="GamePingPong" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
@@ -174,7 +128,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1358" height="814" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16486903" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17180277" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -206,7 +160,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/GameWindow.java</url>
+          <url>file://$PROJECT_DIR$/src/com/company/GamePingPong.java</url>
           <line>50</line>
           <properties />
           <option name="timeStamp" value="11" />
@@ -228,7 +182,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.desktop/java/awt/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105621">
+        <state relative-caret-position="105689">
           <caret line="6589" selection-start-line="6589" selection-end-line="6589" />
         </state>
       </provider>
@@ -254,10 +208,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/GameWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/GamePingPong.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="144" column="14" selection-start-line="144" selection-start-column="14" selection-end-line="144" selection-end-column="14" />
+        <state relative-caret-position="156">
+          <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
